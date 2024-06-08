@@ -1,0 +1,23 @@
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.heart-icon {
+    margin-top:25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 20px;
+}
+
+.heart-icon.pop {
+    animation: pop 0.3s ease-in-out;
+    animation-fill-mode: forwards; /* Keeps the final state of the animation */
+}

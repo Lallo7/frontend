@@ -1,0 +1,60 @@
+.search-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  
+  .new-collections h1 {
+    color: #171717;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  
+  .new-collections hr {
+    width: 150px;
+    height: 4px;
+    border-radius: 10px;
+    background: #252525;
+  }
+  
+  .collections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px auto;
+    gap: 30px;
+    max-width: 1280px;
+  }
+  
+  .search-result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .search-result-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .search-result-details {
+    margin-top: 10px;
+  }
+  
+  .no-results {
+    font-size: 18px;
+    color: #555;
+  }

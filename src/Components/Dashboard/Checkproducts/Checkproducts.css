@@ -1,0 +1,154 @@
+/* General Styles */
+.products-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 20px;
+}
+
+.products-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 10px;
+}
+
+
+/* Sidebar */
+.products-sidebar {
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #dcae30;
+  border-radius: 10px;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+}
+
+.products-sidebar h2 {
+  margin-top: 0;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.products-main-content h2 {
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.products-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.products-sidebar li {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.products-sidebar a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.products-sidebar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.products-sidebar a:hover {
+  color: white;
+}
+
+.products-sidebar a:hover::after,
+.products-sidebar a.active::after {
+  transform: scaleX(1);
+}
+
+.product-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: auto; /* Adjusted width to 50% with margin */
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Remove Button */
+.removebutton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ff6347; /* Adjust color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 70px;
+  margin-right: 10px;
+}
+
+.removebutton:hover {
+  background-color: #ff4500; /* Adjust color as needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .products-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .products-sidebar {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .products-main-content {
+    margin-left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .product-card {
+    width: 100%;
+    position: static; /* Change back to default */
+  }
+}
+
+

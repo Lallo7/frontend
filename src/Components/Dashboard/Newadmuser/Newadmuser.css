@@ -1,0 +1,291 @@
+/* General Styles */
+.newadmuser-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 20px;
+}
+
+.newadmuser-main-content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    opacity: 90%;
+}
+
+.newadmuser-sidebar {
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #dcae30;
+    border-radius: 10px;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+    opacity: 90%;
+}
+
+.newadmuser-sidebar h2 {
+    margin-top: 0;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.newadmuser-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.newadmuser-sidebar li {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.newadmuser-sidebar a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.newadmuser-sidebar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.newadmuser-sidebar a:hover {
+    color: white;
+}
+
+.newadmuser-sidebar a:hover::after,
+.newadmuser-sidebar a.active::after {
+    transform: scaleX(1);
+}
+
+.newadmuser-main-content h2 {
+    color: black;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.users-section,
+.admins-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.users-section {
+    border-right: 1px solid #ccc;
+}
+
+.admins-section {
+    border-left: 1px solid #ccc;
+}
+
+.addadmusercard-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.addadmusercard {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.addadmusercard h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.addadmusercard p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.addadmuser-form-container {
+    display: none; /* Initially hide the form container */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Add opacity and visibility transition */
+}
+
+.addadmuser-form-container.active {
+    display: block; /* Show the form container when active */
+    opacity: 1; /* Set opacity to 1 when active */
+}
+
+.addadmuserform label,
+.addadmuserform input,
+.addadmuserform button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.addadmuserform label {
+    font-weight: bold;
+    color: #333;
+}
+
+.addadmuserform input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addadmuserform button {
+    padding: 10px 20px;
+    background-color: #b28a2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addadmuserform button:hover {
+    background-color: #8c6e21;
+}
+
+.error-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #b28a2d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+.add-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.add-button {
+    background-color: #b28a2d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #8c6e21;
+}
+
+@media (max-width: 768px) {
+    .newadmuser-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .newadmuser-main-content {
+        flex-direction: column;
+        margin-left: 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .newadmuser-sidebar {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .users-section,
+    .admins-section {
+        border: none;
+    }
+
+    .users-section {
+        margin-bottom: 20px;
+    }
+}
+.userremove-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: static;
+}

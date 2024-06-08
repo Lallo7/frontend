@@ -1,0 +1,123 @@
+.hero {
+    min-height: 100vh;
+    background-image: url("../Assets/banner33.png");
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 9%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fadeInAnimation 1s ease-in forwards;
+    position: relative;
+    
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center;
+    width: 100%;
+    gap: 180px; /* Adjust this value to set the space between buttons */
+    margin-top: 400px;
+}
+
+.hero-latest-btn .button-52 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 75px;
+    background: transparent;
+    border: 1px solid #F0ECE5;
+    color: #F0ECE5;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+.hero-latest-btn .button-52:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(0px 10px 15px rgba(240, 236, 229, 0.8)); /* Add drop shadow effect */
+    color: #161A30;
+    background-color: #F0ECE5;
+    border: 1px solid white;
+    opacity: 100%;
+}
+
+.hero-latest-btn .button-52:hover:after {
+    top: 0;
+    left: 0;
+}
+
+.hero-latest-btn img {
+    width: 18px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 500px;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 10px 6%;
+    }
+    .hero-right img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-right img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 0 10%;
+    }
+    .hero-right {
+        display: none;
+    }
+    .hero-latest-btn {
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

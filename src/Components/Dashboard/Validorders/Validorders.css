@@ -1,0 +1,168 @@
+/* General Styles */
+.Validorders-container {
+  display: flex;
+  height: 130vh;
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 20px;
+}
+
+.Validorders-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  opacity: 90%;
+}
+
+.Validorders-main-content .dashboardicon {
+  width: 15px;
+  margin-right: 5px;
+}
+
+/* Sidebar */
+.Validorders-sidebar {
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #dcae30;
+  border-radius: 10px;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+}
+
+.Validorders-sidebar h2 {
+  margin-top: 0;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.Validorders-main-content h2{
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.Validorders-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Validorders-sidebar li {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.Validorders-sidebar a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.Validorders-sidebar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.Validorders-sidebar a:hover::after,
+.Validorders-sidebar a.active::after {
+  transform: scaleX(1);
+}
+
+.Validorders-sidebar a:hover {
+  color: white;
+}
+
+/* Main Content */
+.Validorders-main-content .products-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Validorder-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  position: relative;
+}
+
+.Validorder-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.Validorder-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.Validorder-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Remove Button */
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #FF6347; /* Adjust color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #FF4500; /* Adjust color as needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Validorders-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .Validorders-sidebar {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .Validorders-main-content {
+    margin-left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .Validorder-card {
+    width: 100%;
+    position: static; /* Change back to default */
+  }
+}
+

@@ -1,0 +1,169 @@
+/* General Styles */
+.orders-container {
+  display: flex;
+  height: 130vh;
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 20px;
+}
+
+.orders-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  opacity: 90%;
+}
+
+.orders-main-content .dashboardicon {
+  width: 15px;
+  margin-right: 5px;
+}
+
+/* Sidebar */
+.orders-sidebar {
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #dcae30;
+  border-radius: 10px;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+}
+
+.orders-sidebar h2 {
+  margin-top: 0;
+  color: white;
+  margin-bottom: 30px;
+}
+.orders-main-content h2{
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+
+.orders-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders-sidebar li {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.orders-sidebar a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.orders-sidebar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.orders-sidebar a:hover{
+  color: white;
+  
+}
+
+.orders-sidebar a:hover::after,
+.orders-sidebar a.active::after {
+  transform: scaleX(1);
+}
+
+
+/* Main Content */
+.orders-main-content .products-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  position: relative; /* Added */
+}
+
+.order-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.order-card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.order-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Validate Button */
+.order-card .validate-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-card .validate-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .orders-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .orders-sidebar {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .orders-main-content {
+    margin-left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .order-card {
+    width: 100%;
+    position: static; 
+  }
+}
+

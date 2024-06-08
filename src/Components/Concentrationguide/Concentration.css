@@ -1,0 +1,59 @@
+.concentration-guide {
+    background-color: #F0ECE5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensures the content is stacked vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text within the elements */
+}
+
+
+.concentration-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .concentration-heading hr {
+    flex: 1;
+    height: 5px;
+    background-color: black;
+    margin: 0 10px;
+    border: none;
+  }
+  
+  .concentration-heading h1 {
+    margin: 0;
+    white-space: nowrap; /* Prevent wrapping */
+    color: #161A30;
+  }
+
+.magicpattern-container {
+    display: flex; /* Ensures the magicpattern elements are in a row */
+    justify-content: space-between; /* Adds space between the elements */
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1500px; /* Optional: restricts the maximum width of the container */
+    gap: 10px; /* Adjust the gap value to increase/decrease space between elements */
+    margin-right: 30px;
+    margin-top: -20px;
+}
+
+.magicpattern {
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CradialGradient id=%22b%22 r=%22100%25%22 cx=%22125%25%22 cy=%2258%25%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23fff%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23ddd%22%2F%3E%3C%2FradialGradient%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M748.5 657Q602 814 441 737T245 474.5Q210 289 395 271t342.5 105.5Q895 500 748.5 657Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M748.5 657Q602 814 441 737T245 474.5Q210 289 395 271t342.5 105.5Q895 500 748.5 657Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    color: black;
+    flex-direction: column; /* Stacks the content vertically */
+    font-weight: bold;
+}
+.magicpattern h2 {
+    text-align: center;
+}

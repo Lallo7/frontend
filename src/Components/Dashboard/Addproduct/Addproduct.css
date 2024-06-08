@@ -1,0 +1,213 @@
+/* General Styles */
+.addproduct-container {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.addproduct-main-content .dashboardicon {
+  width: 15px;
+  margin-right: 5px;
+}
+
+/* Sidebar */
+.addproduct-sidebar {
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #dcae30;
+  border-radius: 10px;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.5);
+  opacity: 90%;
+}
+
+.addproduct-sidebar h2 {
+  margin-top: 0;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.addproduct-main-content h2 {
+  color: black;
+  text-decoration: underline;
+}
+
+.addproduct-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.addproduct-sidebar li {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.addproduct-sidebar a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.addproduct-sidebar a:hover {
+  color: white;
+}
+
+.addproduct-sidebar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.addproduct-sidebar a:hover::after,
+.sidebar a.active::after {
+  transform: scaleX(1);
+}
+
+/* Main Content */
+.addproduct-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgb(0, 0, 0, 0.15);
+  margin-left: 10px;
+  opacity: 90%;
+}
+
+/* Checkout Form Styles */
+.addp-checkout-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px;
+  background-color: #dcae30;
+  border-radius: 20px;
+  box-shadow: 10px 16px 16px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+  
+}
+
+
+.addp-checkout-form h1 {
+  margin-bottom: 40px;
+}
+
+.addp-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.addp-form-group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addp-form-group input[type="file"] {
+  /* Hide the default file input button */
+  display: none;
+}
+
+/* Style the label as the file input button */
+.file-input-label {
+  height: 40px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: -1px;
+  background-color: white;
+}
+
+.inputslabels {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.addp-checkout-form input[type="text"],
+.addp-checkout-form input[type="number"],
+.addp-checkout-form select ,textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.addp-checkout-form .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.addp-checkout-form button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 30%;
+  font-weight: bold;
+}
+
+.button-container button:hover {
+  background-color: white;
+  opacity: 90%;
+  color: black;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .addproduct-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .addproduct-sidebar {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .addproduct-main-content {
+    margin-left: 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .addp-form-group {
+    flex-basis: 100%;
+  }
+}

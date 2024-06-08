@@ -1,0 +1,128 @@
+.checkout-container-main {
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(180deg, white, #d5d5d5 60%);
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+
+}
+
+.checkout-form-main {
+  width: 90%;
+  max-width: 600px;
+  background: black !important;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 75px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+ opacity: 90%;
+}
+
+.checkout-form-main form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.checkout-form-heading {
+  margin: 10px 0px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group label {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-size: solid;
+}
+
+.input-group input {
+  height: 40px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.checkout-form-button1 {
+  width: 100%;
+  height: 60px;
+  color: black;
+  background: white;
+  margin-top: 30px;
+  border: none;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 75px;
+  grid-column: 1 / -1;
+}
+
+
+
+.cart-items-summary-main {
+  width: 90%;
+  max-width: 300px;
+  background: black !important;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 75px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  opacity: 90%;
+  
+}
+
+.cart-item-main {
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.cart-items-summary-main h2{
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .checkout-container-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout-form-main form {
+    grid-template-columns: 1fr;
+  }
+
+  .input-group input {
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .checkout-form-button {
+    height: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .cart-items-summary-main {
+    width: 90%;
+    max-width: 600px;
+  }
+}

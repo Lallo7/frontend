@@ -1,0 +1,31 @@
+.logoutbutton button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 80px;
+    width: 100px;
+    transition: all 0.3s ease;
+    animation: buttonAnimation 0.3s ease;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+    margin-left: 10px;
+  }
+  
+  .logoutbutton button:hover {
+    background-color: black;
+    color: white;
+    width: 200px;
+  }
+  
+  @keyframes buttonAnimation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }

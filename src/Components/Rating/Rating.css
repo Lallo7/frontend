@@ -1,0 +1,16 @@
+.rating-container {
+  display: flex;
+  gap: 4px; /* Add some spacing between the stars if needed */
+  margin-top: 20px;
+}
+
+.star-image {
+  cursor: pointer;
+  width: 24px;
+  height: 22px;
+  transition: transform 0.2s ease;
+}
+
+.star-image:hover {
+  transform: scale(1.2); /* Adjust scale factor as needed */
+}
